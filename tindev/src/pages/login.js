@@ -17,6 +17,7 @@ export default function Login({navigation}) {
   const [user, setUser] = useState('');
 
   useEffect(() => {
+    // eslint-disable-next-line no-shadow
     AsyncStorage.getItem('user').then(user => {
       if (user) {
         navigation.navigate('Main', {user});
